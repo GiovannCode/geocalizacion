@@ -4,7 +4,7 @@ require 'db_conexion.php';
 if (isset($_POST['iniciar'])) {
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    $select = $cnnPDO->prepare('SELECT * from user WHERE pass =? and email = ?');
+    $select = $cnnPDO->prepare('SELECT * from user_address WHERE pass =? and email = ?');
 
     $select->execute([$pass, $email]);
     $count = $select->rowCount();
@@ -13,8 +13,8 @@ if (isset($_POST['iniciar'])) {
     if ($count) {
         $_SESSION['name'] = $campo['name'];
         $_SESSION['email'] = $campo['email'];
-        $_SESSION['latitud'] = $campo['latitud'];
-        $_SESSION['longitud'] = $campo['longitud'];
+        $_SESSION['direccion'] = $campo['direccion'];
+      
         header('location:sesion.php');
     }
 }
