@@ -13,6 +13,8 @@ if (isset($_POST['iniciar'])) {
     if ($count) {
         $_SESSION['name'] = $campo['name'];
         $_SESSION['email'] = $campo['email'];
+        $_SESSION['latitud'] = $campo['latitud'];
+        $_SESSION['longitud'] = $campo['longitud'];
         header('location:sesion.php');
     }
 }

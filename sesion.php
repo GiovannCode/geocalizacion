@@ -11,12 +11,12 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-<header class="header">
+    <header class="header">
         <div class="menu container">
             <a href="" class="logo">FoodChi</a>
             <nav class="navbar">
                 <ul>
-                    <li><a href=""><?php echo$_SESSION['name'];?></a></li>
+                    <li><a href=""><?php echo $_SESSION['name']; ?></a></li>
                     <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
             </nav>
@@ -29,10 +29,15 @@ session_start();
     </header>
     <section class="comida">
         <div class="comida-contenido container">
-            <h2>Ubicate en el mapa!</h2>
+            <h2>Tu Ubicacion actual es esta</h2>
             <p class="txt-p">Mueve el puntero para establecer tu Ubicacion</p>
+
+            <iframe width="100%" height="500" src="https://maps.google.com/maps?q=<?php echo $_SESSION['latitud']; ?>,<?php echo $_SESSION['longitud']; ?>&output=embed"></iframe> 
+ 
+
             <a href="" class="btn-1">Informacion</a>
         </div>
     </section>
 </body>
+
 </html>
