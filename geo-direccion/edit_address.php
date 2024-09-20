@@ -9,6 +9,8 @@ session_start();
     $update = $cnnPDO -> prepare('UPDATE user_address SET direccion = ?');
     $update->execute([$new_address]);
 
+    $_SESSION['direccion'] = $_POST['new_address'];
+
     header('location:sesion.php');
 
  }
