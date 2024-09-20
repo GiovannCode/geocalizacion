@@ -25,14 +25,14 @@ if (isset($_POST['registrar'])) {
 </head>
 <body>
 
-<div class="form-container">
+    <div class="form-container">
         <h2>Registro</h2>
-        <form  method="post">
+        <form method="post">
             <label>Nombre Completo:</label>
-            <input type="text"  name="name" placeholder="Escribe tu nombre" required>
+            <input type="text" name="name" placeholder="Escribe tu nombre" required>
 
-            <label >Correo Electrónico:</label>
-            <input type="email"  name="email" placeholder="Escribe tu correo" required>
+            <label>Correo Electrónico:</label>
+            <input type="email" name="email" placeholder="Escribe tu correo" required>
 
             <label>Contraseña:</label>
             <input type="password" name="pass" placeholder="Escribe tu contraseña" required>
@@ -40,7 +40,7 @@ if (isset($_POST['registrar'])) {
             <input type="text" name="direccion" placeholder="Direccion" required>
 
             <input type="submit" name="registrar">
-        </form>
+        </form>     
     </div>
 </body>
 </html>
