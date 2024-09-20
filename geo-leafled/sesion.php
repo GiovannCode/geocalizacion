@@ -31,7 +31,7 @@ session_start();
     <section class="comida">
         <div class="comida-contenido container">
             <h2>Tu Ubicacion actual es esta</h2>
-            <p class="txt-p">Mueve el puntero para establecer tu Ubicacion</p>
+            <!-- <p class="txt-p">Mueve el puntero para establecer tu Ubicacion</p> -->
 
             <iframe width="100%" height="500" src="https://maps.google.com/maps?q=<?php echo $_SESSION['latitud']; ?>,<?php echo $_SESSION['longitud']; ?>&output=embed"></iframe> 
 
