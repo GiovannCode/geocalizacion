@@ -57,7 +57,8 @@ if (isset($_POST['registrar'])) {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         
-        marker = L.marker([latitud, longitud]).addTo(map);
+        marker = L.marker([latitud, longitud]).addTo(map) .bindPopup('Este punto se guardara como tu Ubicacion')
+        .openPopup();
 
         map.on('click', clickMapa)
 
@@ -68,7 +69,8 @@ if (isset($_POST['registrar'])) {
             document.getElementById('latitud').value = e.latlng.lat
             document.getElementById('longitud').value = e.latlng.lng
 
-            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map).bindPopup('Este punto se guardara como tu Ubicacion')
+            .openPopup();
 
          
         }
