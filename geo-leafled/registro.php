@@ -95,7 +95,7 @@ if (isset($_POST['registrar'])) {
         </form>
     </div>
 
-    <div id="cont-map" class="cont-map" style="margin: 20px auto 50px; width: 800px; height:400px; box-shadow:0 3px 15px black"></div>
+    <div id="cont-map" class="cont-map" ></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
